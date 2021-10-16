@@ -42,7 +42,100 @@
                     <button class="btn btn-outline-primary ">Development</button>
                 </div>
             </div>
+            <div class="row mb-4">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="popular-job-item">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
+                            </div>
+                            <div>
+                                <strong>Assistant / Store Keeper</strong> <span class="text-success">Featured</span>
+
+                                <div class="text-muted mt-2">
+                                    <span class="me-2"><i class="fas fa-briefcase me-1"></i> Automotive Jobs</span>
+                                    <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
+                                    <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
+                                </div>
+                                <button class="btn btn-info text-white btn-sm mt-3">PartTime</button>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="popular-job-item">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
+                            </div>
+                            <div>
+                                <strong>Assistant / Store Keeper</strong> <span class="text-success">Featured</span>
+
+                                <div class="text-muted mt-2">
+                                    <span class="me-2"><i class="fas fa-briefcase me-1"></i> Automotive Jobs</span>
+                                    <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
+                                    <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
+                                </div>
+                                <button class="btn btn-info text-white btn-sm mt-3">PartTime</button>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="popular-job-item">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
+                            </div>
+                            <div>
+                                <strong>Assistant / Store Keeper</strong> <span class="text-success">Featured</span>
+
+                                <div class="text-muted mt-2">
+                                    <span class="me-2"><i class="fas fa-briefcase me-1"></i> Automotive Jobs</span>
+                                    <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
+                                    <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
+                                </div>
+                                <button class="btn btn-info text-white btn-sm mt-3">PartTime</button>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="popular-job-item">
+                        <div class="d-flex justify-content-center">
+                            <div>
+                                <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
+                            </div>
+                            <div>
+                                <strong>Assistant / Store Keeper</strong> <span class="text-success">Featured</span>
+
+                                <div class="text-muted mt-2">
+                                    <span class="me-2"><i class="fas fa-briefcase me-1"></i> Automotive Jobs</span>
+                                    <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
+                                    <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
+                                </div>
+                                <button class="btn btn-info text-white btn-sm mt-3">PartTime</button>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 
 @endsection
