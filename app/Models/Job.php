@@ -31,6 +31,6 @@ class Job extends Model
 
     public function categories()
     {
-        return $this->hasMany(JobCategory::class);
+        return $this->belongsToMany(Category::class, 'job_categories');
     }
 }

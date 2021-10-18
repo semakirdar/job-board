@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Company;
 use App\Models\Job;
 use Illuminate\Http\Request;
 
@@ -10,6 +11,9 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $companies = Company::query()
+            ->with('location')
+            ->get();
         $categories = Category::query()->get();
         $jobs = Job::query()
             ->with('location')
@@ -19,7 +23,8 @@ class HomeController extends Controller
 
         return view('home', [
             'categories' => $categories,
-            'jobs' => $jobs
+            'jobs' => $jobs,
+            'companies' => $companies
         ]);
     }
 }

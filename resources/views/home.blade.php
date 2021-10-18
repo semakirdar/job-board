@@ -52,7 +52,7 @@
                                     <strong>{{ $job->title }}</strong> / <span class="text-success">Featured</span>
                                     <div class="text-muted mt-2">
                                         @foreach($job->categories as $item)
-                                        <span class="me-2"><i class="fas fa-briefcase me-1"></i>{{ $item->category->name }}</span>
+                                        <span class="me-2"><i class="fas fa-briefcase me-1"></i>{{ $item->name }}</span>
                                         @endforeach
                                         <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i>{{ $job->location->name }}</span>
                                         <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
@@ -69,8 +69,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="container text-dark">
         <div class="features">
             <div class="text-center mb-5">
@@ -99,7 +97,6 @@
             </div>
         </div>
     </div>
-
     <div class="top-companies text-dark my-5">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
@@ -111,48 +108,22 @@
             <p class="text-muted mb-5 mt-2">Some of the companies we’ve helped recruit excellent applicants over the
                 years.</p>
             <div class="row">
+                @foreach($companies as $company)
                 <div class="col-sm-12 col-md-12 col-lg-3">
                     <div class="card p-5 text-center">
                         <div class="text-center top-company-image mb-2">
                             <img src="{{ asset('images/popular-job.jpeg') }}">
                         </div>
-                        <strong>Assistant </strong>
-                        <span class="me-2 text-muted mt-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
+                        <strong>{{ $company->name }} </strong>
+                        <span class="me-2 text-muted mt-2"><i class="fas fa-map-marker-alt me-1"></i>{{ $company->location->name }}</span>
                         <button class="btn btn-sm mt-2">Open Job</button>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-3">
-                    <div class="card p-5 text-center">
-                        <div class="text-center top-company-image mb-2">
-                            <img src="{{ asset('images/popular-job.jpeg') }}">
-                        </div>
-                        <strong>Assistant </strong>
-                        <span class="me-2 text-muted mt-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
-                        <button class="btn btn-sm mt-2">Open Job</button>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-3">
-                    <div class="card p-5 text-center">
-                        <div class="text-center top-company-image mb-2">
-                            <img src="{{ asset('images/popular-job.jpeg') }}">
-                        </div>
-                        <strong>Assistant </strong>
-                        <span class="me-2 text-muted mt-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
-                        <button class="btn btn-sm mt-2">Open Job</button>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-3">
-                    <div class="card p-5 text-center">
-                        <div class="text-center top-company-image mb-2">
-                            <img src="{{ asset('images/popular-job.jpeg') }}">
-                        </div>
-                        <strong>Assistant </strong>
-                        <span class="me-2 text-muted mt-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
-                        <button class="btn btn-sm mt-2">Open Job</button>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
+
+
 
 @endsection
