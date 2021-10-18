@@ -35,104 +35,37 @@
                     <p>Know your worth and find the job that qualify your life</p>
                 </div>
                 <div class="col-lg-12 text-center mb-4">
-                    <button class="btn btn-outline-primary me-3">All</button>
-                    <button class="btn btn-outline-primary me-3">Design</button>
-                    <button class="btn btn-outline-primary me-3">Marketing</button>
-                    <button class="btn btn-outline-primary me-3">Health</button>
-                    <button class="btn btn-outline-primary ">Development</button>
+                    @foreach($categories as $category)
+                        <button class="btn btn-outline-primary me-3">{{ $category->name }}</button>
+                    @endforeach
                 </div>
             </div>
             <div class="row mb-4">
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <div class="popular-job-item">
-                        <div class="d-flex justify-content-center">
-                            <div>
-                                <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
-                            </div>
-                            <div>
-                                <strong>Assistant / Store Keeper</strong> <span class="text-success">Featured</span>
-
-                                <div class="text-muted mt-2">
-                                    <span class="me-2"><i class="fas fa-briefcase me-1"></i> Automotive Jobs</span>
-                                    <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
-                                    <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
+                @foreach($jobs as $job)
+                    <div class="col-sm-12 col-md-12 col-lg-6 mb-4">
+                        <div class="popular-job-item">
+                            <div class="d-flex justify-content-center">
+                                <div>
+                                    <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
                                 </div>
-                                <button class="btn btn-info text-white btn-sm mt-3">PartTime</button>
+                                <div>
+                                    <strong>{{ $job->title }}</strong> / <span class="text-success">Featured</span>
+                                    <div class="text-muted mt-2">
+                                        @foreach($job->categories as $item)
+                                        <span class="me-2"><i class="fas fa-briefcase me-1"></i>{{ $item->category->name }}</span>
+                                        @endforeach
+                                        <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i>{{ $job->location->name }}</span>
+                                        <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
+                                    </div>
+                                    <button class="btn text-primary btn-sm mt-3">{{ $job->type }}</button>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <i class="fas fa-bookmark"></i>
+                            <div>
+                                <i class="fas fa-bookmark"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <div class="popular-job-item">
-                        <div class="d-flex justify-content-center">
-                            <div>
-                                <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
-                            </div>
-                            <div>
-                                <strong>Assistant / Store Keeper</strong> <span class="text-success">Featured</span>
-
-                                <div class="text-muted mt-2">
-                                    <span class="me-2"><i class="fas fa-briefcase me-1"></i> Automotive Jobs</span>
-                                    <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
-                                    <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
-                                </div>
-                                <button class="btn btn-info text-white btn-sm mt-3">PartTime</button>
-                            </div>
-                        </div>
-                        <div>
-                            <i class="fas fa-bookmark"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <div class="popular-job-item">
-                        <div class="d-flex justify-content-center">
-                            <div>
-                                <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
-                            </div>
-                            <div>
-                                <strong>Assistant / Store Keeper</strong> <span class="text-success">Featured</span>
-
-                                <div class="text-muted mt-2">
-                                    <span class="me-2"><i class="fas fa-briefcase me-1"></i> Automotive Jobs</span>
-                                    <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
-                                    <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
-                                </div>
-                                <button class="btn btn-info text-white btn-sm mt-3">PartTime</button>
-                            </div>
-                        </div>
-                        <div>
-                            <i class="fas fa-bookmark"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <div class="popular-job-item">
-                        <div class="d-flex justify-content-center">
-                            <div>
-                                <img class="img-fluid me-4" src="{{ asset('images/popular-job.jpeg') }}">
-                            </div>
-                            <div>
-                                <strong>Assistant / Store Keeper</strong> <span class="text-success">Featured</span>
-
-                                <div class="text-muted mt-2">
-                                    <span class="me-2"><i class="fas fa-briefcase me-1"></i> Automotive Jobs</span>
-                                    <span class="me-2"><i class="fas fa-map-marker-alt me-1"></i> Location</span>
-                                    <span><i class="fas fa-money-check-alt me-1"></i> $250 - $280 / week</span>
-                                </div>
-                                <button class="btn btn-info text-white btn-sm mt-3">PartTime</button>
-                            </div>
-                        </div>
-                        <div>
-                            <i class="fas fa-bookmark"></i>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -167,11 +100,15 @@
         </div>
     </div>
 
-
     <div class="top-companies text-dark my-5">
         <div class="container">
-            <h3>Top Company Registered</h3>
-            <p class="text-muted mb-5 mt-3">Some of the companies we’ve helped recruit excellent applicants over the
+            <div class="d-flex justify-content-between align-items-center">
+                <h3>Top Company Registered</h3>
+                <span>
+                    <a href="#">Browse All Companys  <i class="fas fa-chevron-right"></i> </a>
+                </span>
+            </div>
+            <p class="text-muted mb-5 mt-2">Some of the companies we’ve helped recruit excellent applicants over the
                 years.</p>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-3">
@@ -217,9 +154,5 @@
             </div>
         </div>
     </div>
-
-
-
-
 
 @endsection

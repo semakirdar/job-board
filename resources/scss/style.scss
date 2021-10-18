@@ -37,12 +37,21 @@ nav {
             width: 50px;
             height: 50px;
         }
+
+        button {
+            border-radius: 40px;
+            background-color: #dee8f8;
+        }
     }
 }
 
-//#dee8f8
+
+.features {
+    padding: 40px;
+}
+
 .top-companies {
-    padding: 100px;
+    padding: 110px;
     background-color: #f3f7fb;
 
     .top-company-image {
@@ -54,7 +63,7 @@ nav {
 
     button {
         border-radius: 40px;
-        color:$primary;
-        background-color:#dee8f8;
+        color: $primary;
+        background-color: #dee8f8;
     }
 }

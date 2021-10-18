@@ -9,10 +9,21 @@ class JobCategory extends Model
 {
     use HasFactory;
 
+    protected $with = [
+        'category'
+    ];
+
     protected $fillable = [
         'job',
         'category_id',
         'job_id'
-
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+
+
 }

@@ -18,4 +18,19 @@ class Job extends Model
         'description',
         'type'
     ];
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
+    }
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
+
+    public function categories()
+    {
+        return $this->hasMany(JobCategory::class);
+    }
 }
