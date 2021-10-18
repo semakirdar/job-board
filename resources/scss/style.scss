@@ -22,7 +22,7 @@ nav {
     z-index: 999;
 }
 
-.most-popular-job {
+.most-popular-jobs {
     padding-top: 85px;
     padding-bottom: 85px;
 
@@ -65,5 +65,21 @@ nav {
         border-radius: 40px;
         color: $primary;
         background-color: #dee8f8;
+    }
+}
+
+.popular-categories{
+    padding: 70px;
+    .popular-category-item{
+        border: 1px solid #d2d0d0;
+        .popular-category-icon{
+            padding: 20px;
+            background-color:#ecedf2;
+            border-radius: 10px;
+            i{
+                color: $primary;
+                font-size: 40px;
+            }
+        }
     }
 }
