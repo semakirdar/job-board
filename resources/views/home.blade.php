@@ -1,28 +1,28 @@
 @extends('layout')
 @section('content')
 
-    <div>
-        <div class="hero d-flex justify-content-center align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 text-center mb-4">
-                        <h2>The Easiest Way to Get Your New Job</h2>
-                    </div>
-                    <div class="col-sm-12">
-                        <form class="d-flex">
-                            <div class="input-group mb-3">
-                                <input type="search" class="form-control p-4" placeholder="Search" aria-label="Search"
-                                       aria-describedby="button-addon2">
-                                <button class="btn btn-warning p-3" type="submit" id="button-addon2">Button</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-sm-12 text-center">
-                        <p>Popular Searches : Designer Developer Web IOS PHP Senior Engineer</p>
-                    </div>
+
+    <div class="hero d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center mb-4">
+                    <h2>The Easiest Way to Get Your New Job</h2>
+                </div>
+                <div class="col-sm-12">
+                    <form class="d-flex">
+                        <div class="input-group mb-3">
+                            <input type="search" class="form-control p-4" placeholder="Search" aria-label="Search"
+                                   aria-describedby="button-addon2">
+                            <button class="btn btn-warning p-3" type="submit" id="button-addon2">Button</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <p>Popular Searches : Designer Developer Web IOS PHP Senior Engineer</p>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="container">
@@ -136,6 +136,39 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container text-dark">
+        <div class="features">
+            <div class="text-center mb-5">
+                <h3>How It Works?</h3>
+                <p class="text-muted mt-3">Job for anyone, anywhere</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="feature-item text-center">
+                        <img class="img-fluid mb-3" src="{{ asset('images/feature-1.jpeg') }}">
+                        <p>Register an account <br> to start</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="feature-item text-center">
+                        <img class="img-fluid mb-3" src="{{ asset('images/feature-2.jpeg') }}">
+                        <p>Register an account <br> to start</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="feature-item text-center">
+                        <img class="img-fluid mb-3" src="{{ asset('images/feature-3.jpeg') }}">
+                        <p>Register an account <br> to start</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 
 @endsection
